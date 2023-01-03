@@ -1,0 +1,29 @@
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    .gemstool-footer {
+        .credits {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include max-media($md) {
+                flex-direction: column;
+                justify-content: center;
+                .developed {
+                    span {
+                        font-size: 12px;
+                        line-height: 19px;
+                        color: #707070;
+                    }
+                }
+            }
+            span {
+                @extend .bold-16;
+                font-size: 13px;
+            }
+        }
+    }
+}

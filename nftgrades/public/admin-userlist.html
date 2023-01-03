@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>NFT Grades | Admin Login</title>
+</head>
+
+<body>
+    <div class="body-wrapper">
+
+        <!-- Navigation header start -->
+        <header>
+            <nav class="head-nav">
+                <div class="container-lg">
+                    <div class="wrapper">
+                        <div class="brand-logo">
+                            <a href="./">
+                                <img src="./images/gemstool-logo.png" alt="NFT Grades image" width="180px" height="46px">
+                            </a>
+                        </div>
+                        <div class="nav-links">
+                            <ul class="user-list d-none">
+                                <li>
+                                    <a href="./submit-nfts.html">Submit NFT</a>
+                                </li>
+                            </ul>
+                            <ul class="admin-list">
+                                <li>
+                                    <a href="./admin-userlist.html">User List</a>
+                                </li>
+                                <li>
+                                    <a href="./admin-nftlist.html">NFT List</a>
+                                </li>
+                                <li>
+                                    <a href="#">User Name 
+                                        <span><i class="fas fa-chevron-circle-down"></i></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> <span>Logout</span> </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Navigation header end -->
+
+        <main class="main-spacing">
+            <!-- User list and add user form start -->
+            <section class="admin-userlist">
+                <div class="container-lg">
+                    <div class="row">
+                        <!-- User list start -->
+                        <div class="col-lg-7 left-block">
+                            <div class="user-list-table-wrapper">
+                                <div class="heading">
+                                    <h1> <span class="highlight">User</span> List </h1>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="user-list-table table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <td>#</td>
+                                                <td>User Information</td>
+                                                <td>Phone Number</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="user-col">
+                                                    <div class="user-info-block">
+                                                        <div class="image">
+                                                            <img src="./images/user-dp.png" alt="User profile image" height="50px" width="50px">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="user-name">
+                                                                <span>Abidhusain Chidi</span>
+                                                            </div>
+                                                            <div class="user-email">
+                                                                <span>abidhusain@qalbit.com</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="user-number">9874563210</td>
+                                                <td class="view-more">
+                                                    <a href="#">
+                                                        <i class="fas fa-external-link-alt"></i> Visit now
+                                                    </a>
+                                                </td>
+                                                <td class="action-col">
+                                                    <div class="action-btns">
+                                                        <button class="edit">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </button>
+                                                        <button class="delete">
+                                                            <i class="fas fa-trash-alt"></i> Delete
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- User list end -->
+
+                        <!-- Add User form start -->
+                        <div class="col-lg-5 right-block">
+                            <div class="add-user-form-wrapper">
+                                <div class="heading">
+                                    <h1> <span class="highlight">Add</span> User </h1>
+                                </div>
+                                <form action="" method="post" id="add-user-form">
+                                    <div class="box-modal">
+                                        <div class="title">
+                                            <h3>User Information</h3>
+                                        </div>
+                                        <div class="full-name form-group">
+                                            <div class="first-name form-group">
+                                                <input type="text" name="user_first_name" id="user_first_name" class="form-control" placeholder="First Name">
+                                                <div class="error-message"></div>
+                                            </div>
+                                            <div class="last-name form-group">
+                                                <input type="text" name="user_last_name" id="user_last_name" class="form-control" placeholder="Last Name">
+                                                <div class="error-message"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" name="user_phone" id="user_phone" class="form-control" placeholder="Phone Number">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="user_email" id="user_email" class="form-control" placeholder="Email">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="eth_add" id="eth_add" class="form-control" placeholder="ETH Address">
+                                            <div class="error-message"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="form-btn add-user-btn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Add User form end -->
+                    </div>
+                </div>
+            </section>
+            <!-- User list and add user form end -->
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

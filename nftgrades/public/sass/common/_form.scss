@@ -1,0 +1,135 @@
+.form-layout {
+    .box-modal {
+        padding: 30px;
+        border-radius: 20px;
+        background-color: $darkblue2;
+        box-shadow: 0px 0px 20px 0px $black;
+        @include max-media($sm) {
+            padding: 20px 15px;
+        }
+        .title {
+            h3 {
+                @extend .bold-18;
+                font-weight: 900;
+                margin-bottom: 16px;
+            }
+        }
+        .full-name {
+            @include min-media($xl) {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 20px;
+                margin-bottom: 0 !important;
+                .form-group{
+                    width: 50%;
+                }
+            }
+        }
+        .form-collection {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20px;
+        }
+        .form-group {
+            margin-bottom: 5px;
+            &:nth-last-child(1) {
+                margin-bottom: 0px;
+            }
+            @include max-media($sm) {
+                margin-bottom: 5px;
+            }
+            label{
+                font-family: $nunito-fonts;
+                padding-left: 15px;
+            }
+            .form-control {
+                border-radius: 50px;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                height: 60px;
+                background-color: $darkblue1;
+                padding: 18px;
+                @extend .bold-18;
+                &::placeholder {
+                    @extend .bold-18;
+                    color: #b3b3b3;
+                }
+                @include max-media($sm) {
+                    height: 48px;
+                }
+                @include max-media($sm) {
+                    padding: 12px;
+                }
+            }
+            input[type=time]::-webkit-calendar-picker-indicator{
+                background-color: #1e416e;
+                border-radius: 6px;
+            }
+            input[type=date]::-webkit-calendar-picker-indicator{
+                background-color: #1e416e;
+                border-radius: 6px;
+            }
+            .file-label {
+                position: relative;
+                cursor: pointer;
+                margin-bottom: 0;
+                word-wrap: break-word;
+                height: auto;
+            }
+            &.select-group {
+                position: relative;
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     width: 24px;
+                //     height: 24px;
+                //     top: 20px;
+                //     right: 15px;
+                //     background-image: url(../images/chevron-down.svg);
+                //     background-repeat: no-repeat;
+                //     background-size: contain;
+                    
+                //     @include max-media($sm) {
+                //         top: 15px;
+                //         width: 20px;
+                //         height: 20px;
+                //     }
+                // }
+                select {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    padding: 0 !important;
+                    padding-left: 18px !important;
+                }
+            }
+            .error-message{
+                color: red;
+                padding-left: 10px;
+                font-size: 12px;
+                font-family: $nunito-fonts;
+                min-height: 15px;
+            }
+            select.form-control{
+                appearance: none;
+                background-image: url(../images/chevron-down.svg);
+                background-repeat: no-repeat;
+                background-position: 95%;
+            }
+        }
+    }
+
+    
+    button.form-btn {
+        @extend .btn-layout;
+        margin-top: 40px;
+        @include max-media($md) {
+            margin-top: 35px;
+        }
+        @include max-media($sm) {
+            margin-top: 25px;
+        }
+    }
+}
+
+

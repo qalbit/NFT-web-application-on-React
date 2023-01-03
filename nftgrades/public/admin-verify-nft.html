@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>NFT Grades | Admin Login</title>
+</head>
+
+<body>
+    <div class="body-wrapper">
+
+        <!-- Navigation header start -->
+        <header>
+            <nav class="head-nav">
+                <div class="container-lg">
+                    <div class="wrapper">
+                        <div class="brand-logo">
+                            <a href="./">
+                                <img src="./images/gemstool-logo.png" alt="NFT Grades image" width="180px" height="46px">
+                            </a>
+                        </div>
+                        <div class="nav-links">
+                            <ul class="user-list d-none">
+                                <li>
+                                    <a href="./submit-nfts.html">Submit NFT</a>
+                                </li>
+                            </ul>
+                            <ul class="admin-list">
+                                <li>
+                                    <a href="./admin-userlist.html">User List</a>
+                                </li>
+                                <li>
+                                    <a href="./admin-nftlist.html">NFT List</a>
+                                </li>
+                                <li>
+                                    <a href="#">User Name 
+                                        <span><i class="fas fa-chevron-circle-down"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Navigation header end -->
+
+        <main class="main-spacing">
+            <!-- Submit NFTs form start -->
+            <section class="verify-nft">
+                <div class="nft-container">
+                    <div class="container-lg">
+                        <div class="row">
+                            <div class="col-12 heading">
+                                <h1> <span class="highlight">Verify</span> NFTs </h1>
+                            </div>
+                            <div class="col-xl-9 col-lg-10 col-md-12 left-block">
+                                <div class="verify-nft-form">
+                                    <form action="" method="post" id="nft-verification-form" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-md-6 left-box">
+                                                <div class="box-modal">
+                                                    <div class="title">
+                                                        <h3>User Information</h3>
+                                                    </div>
+                                                    <div class="full-name form-group">
+                                                        <div class="first-name form-group">
+                                                            <input type="text" name="user_first_name" id="user_first_name" class="form-control" placeholder="First Name">
+                                                            <div class="error-message"></div>
+                                                        </div>
+                                                        <div class="last-name form-group">
+                                                            <input type="text" name="user_last_name" id="user_last_name" class="form-control" placeholder="Last Name">
+                                                            <div class="error-message"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="tel" name="user_phone" id="user_phone" class="form-control" placeholder="Phone Number">
+                                                        <div class="error-message"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="email" name="user_email" id="user_email" class="form-control" placeholder="Email">
+                                                        <div class="error-message"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" name="eth_add" id="eth_add" class="form-control" placeholder="ETH Address">
+                                                        <div class="error-message"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 right-box">
+                                                <div class="box-modal">
+                                                    <div class="title">
+                                                        <h3>About your NFT</h3>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" name="nft_name" id="nft_name" class="form-control" placeholder="Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="url" name="nft_link" id="nft_link" class="form-control" placeholder="Link">
+                                                    </div>
+                                                    <div class="form-collection">
+                                                        <div class="form-group">
+                                                            <input type="tel" name="add_popularity" id="add_popularity" class="form-control" placeholder="Popularity">
+                                                            <div class="error-message"></div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="tel" name="add_community" id="add_community" class="form-control" placeholder="Community">
+                                                            <div class="error-message"></div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="tel" name="add_originality" id="add_originality" class="form-control" placeholder="Originality">
+                                                            <div class="error-message"></div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="tel" name="add_total" id="add_total" class="form-control" placeholder="total">
+                                                            <div class="error-message"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" name="nft_utility" id="nft_utility" class="form-control" placeholder="Utility">
+                                                        <div class="error-message"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="image">
+                                                            <img src="./images/user-dp.png" alt="user NFT image" width="130px" height="130px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="form-btn nft-submit-btn">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Submit NFTs form end -->
+
+            <!-- Response modal start  -->
+            <div class="custom-modal">
+                <div class="wrapper">
+                    <div class="content">
+                        <div class="title">
+                            <h4>Thank you</h4>
+                        </div>
+                        <div class="icon">
+                            <img src="./images/checkmark-icon.png" alt="Checkmark Icon" width="130px" height="130px">
+                        </div>
+                        <div class="text">
+                            <p>
+                                We received your NFT Information We will verify your NFT Information and approve it. We will email you once it is approved.
+                            </p>
+                        </div>
+                        <div class="redirect">
+                            <a href="./">Continue Browsing Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+            <!-- Response modal end  -->
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

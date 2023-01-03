@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Gems Tool</title>
+</head>
+
+<body>
+    <div class="body-wrapper">
+
+        <!-- Start of navigation -->
+        <header>
+            <nav class="head-nav">
+                <div class="container-lg">
+                    <div class="wrapper">
+                        <div class="brand-logo">
+                            <img src="./images/gemstool-logo.png" alt="NFT Grades image" width="180px" height="46px">
+                        </div>
+                        <div class="nav-links">
+                            <div class="hemburger">
+                                <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <ul class="user-list">
+                                <li>
+                                    <a href="./submit-nfts.html">Submit NFT</a>
+                                </li>
+                            </ul>
+                            <ul class="admin-list d-none">
+                                <li>
+                                    <a href="./admin-userlist.html">User List</a>
+                                </li>
+                                <li>
+                                    <a href="./admin-nftlist.html">NFT List</a>
+                                </li>
+                                <li>
+                                    <a href="#">User Name 
+                                        <span><i class="fas fa-chevron-circle-down"></i></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> <span>Logout</span> </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile-nav">
+                            <ul class="mobile-userlist">
+                                <li>
+                                    <a href="./submit-nfts.html">Submit NFT</a>
+                                </li>
+                            </ul>
+                            <ul class="mobile-adminlist">
+                                <li>
+                                    <a href="./admin-userlist.html">User List</a>
+                                </li>
+                                <li>
+                                    <a href="./admin-nftlist.html">NFT List</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Username <span><i class="fas fa-chevron-circle-down"></i></span></a>
+                                    <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> <span>Logout</span> </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End of navigation -->
+
+        <!-- Start of main block -->
+        <main class="main-spacing">
+
+            <!-- Trending block start -->
+            <section class="trending-block">
+                <div class="container-lg">
+                    <div class="heading">
+                        <h1> <span class="highlight"> Trending </span> NFTs</h1>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-items">
+                            <div class="item nft-block">
+                                <div class="content">
+                                    <div class="row m-0">
+                                        <div class="col-5 nft-info-col">
+                                            <div class="nft-info">
+                                                <div class="image">
+                                                    <a href="./">
+                                                        <img src="./images/user-dp.png" alt="Abidhusain profile image" height="90px" width="90px">
+                                                    </a>
+                                                </div>
+                                                <div class="nft-title">
+                                                    <h2 class="highlight">basis.markets</h2>
+                                                </div>
+                                                <div class="nft-user">
+                                                    <h3 class="peak">Abidhusain Chidi</h3>
+                                                </div>
+                                                <div class="nft-redirect-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fas fa-external-link-alt"></i> Visit now
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 nft-stat-col">
+                                            <div class="nft-stats">
+                                                <div class="item">
+                                                    <div class="text">
+                                                        <span>Popularity</span>
+                                                    </div>
+                                                    <div class="stat">
+                                                        <span>26%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="text">
+                                                        <span>Community</span>
+                                                    </div>
+                                                    <div class="stat">
+                                                        <span>28%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="text">
+                                                        <span>Originality</span>
+                                                    </div>
+                                                    <div class="stat">
+                                                        <span>68%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="text">
+                                                        <span>Total</span>
+                                                    </div>
+                                                    <div class="stat">
+                                                        <span>128%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Trending block end -->
+
+            <!-- New NFTs block and Reflect Rank block start -->
+
+            <section class="nft-group-section">
+                <div class="container-lg">
+                    <div class="row">
+                        <!-- New NFTs block start -->
+                        <div class="col-lg-8">
+                            <div class="new-nft">
+                                <div class="heading">
+                                    <h1><span class="highlight">New</span> NFTs</h1>
+                                </div>
+                                <div class="nft-table-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="nft-table table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <td>#</td>
+                                                    <td>NFT Details</td>
+                                                    <td>Popularity</td>
+                                                    <td>Community</td>
+                                                    <td>Utility</td>
+                                                    <td>Originality</td>
+                                                    <td>Total</td>
+                                                    <td></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="nft-col">
+                                                        <div class="nft-detail">
+                                                            <div class="image">
+                                                                <img src="./images/user-dp.png" alt="User profile image" width="90px" height="90px">
+                                                            </div>
+                                                            <div class="nft-content">
+                                                                <div class="nft-name">
+                                                                    <span>basis.markets</span>
+                                                                </div>
+                                                                <div class="nft-user-name">
+                                                                    <span>Abidhusain</span>
+                                                                </div>
+                                                                <div class="nft-detail-btn">
+                                                                    <a href="javascript:void(0);">
+                                                                        <i class="fas fa-external-link-alt"></i> Visit now
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>26</td>
+                                                    <td>28</td>
+                                                    <td>Reward</td>
+                                                    <td>68</td>
+                                                    <td>128</td>
+                                                    <td class="action-col">
+                                                        <div class="action-btns">
+                                                            <button class="action like">Like <i class="fas fa-thumbs-up"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="nft-col">
+                                                        <div class="nft-detail">
+                                                            <div class="image">
+                                                                <img src="./images/user-dp.png" alt="User profile image" width="90px" height="90px">
+                                                            </div>
+                                                            <div class="nft-content">
+                                                                <div class="nft-name">
+                                                                    <span>basis.markets</span>
+                                                                </div>
+                                                                <div class="nft-user-name">
+                                                                    <span>Abidhusain</span>
+                                                                </div>
+                                                                <div class="nft-detail-btn">
+                                                                    <a href="javascript:void(0);">
+                                                                        <i class="fas fa-external-link-alt"></i> Visit now
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>26</td>
+                                                    <td>28</td>
+                                                    <td>Reward</td>
+                                                    <td>68</td>
+                                                    <td>128</td>
+                                                    <td class="action-col">
+                                                        <div class="action-btns">
+                                                            <button class="action like">Like <i class="fas fa-thumbs-up"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="nft-col">
+                                                        <div class="nft-detail">
+                                                            <div class="image">
+                                                                <img src="./images/user-dp.png" alt="User profile image" width="90px" height="90px">
+                                                            </div>
+                                                            <div class="nft-content">
+                                                                <div class="nft-name">
+                                                                    <span>basis.markets</span>
+                                                                </div>
+                                                                <div class="nft-user-name">
+                                                                    <span>Abidhusain</span>
+                                                                </div>
+                                                                <div class="nft-detail-btn">
+                                                                    <a href="javascript:void(0);">
+                                                                        <i class="fas fa-external-link-alt"></i> Visit now
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>26</td>
+                                                    <td>28</td>
+                                                    <td>Reward</td>
+                                                    <td>68</td>
+                                                    <td>128</td>
+                                                    <td class="action-col">
+                                                        <div class="action-btns">
+                                                            <button class="action like">Like <i class="fas fa-thumbs-up"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="nft-col">
+                                                        <div class="nft-detail">
+                                                            <div class="image">
+                                                                <img src="./images/user-dp.png" alt="User profile image" width="90px" height="90px">
+                                                            </div>
+                                                            <div class="nft-content">
+                                                                <div class="nft-name">
+                                                                    <span>basis.markets</span>
+                                                                </div>
+                                                                <div class="nft-user-name">
+                                                                    <span>Abidhusain</span>
+                                                                </div>
+                                                                <div class="nft-detail-btn">
+                                                                    <a href="javascript:void(0);">
+                                                                        <i class="fas fa-external-link-alt"></i> Visit now
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>26</td>
+                                                    <td>28</td>
+                                                    <td>Reward</td>
+                                                    <td>68</td>
+                                                    <td>128</td>
+                                                    <td class="action-col">
+                                                        <div class="action-btns">
+                                                            <button class="action like">Like <i class="fas fa-thumbs-up"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- NFT list for mobile devices -->
+                                <div class="mobile-nft-list">
+                                    <div class="user-nft-block-mobile">
+                                        <div class="content">
+                                            <div class="row m-0">
+                                                <div class="col-5 nft-info-col">
+                                                    <div class="nft-info">
+                                                        <div class="image">
+                                                            <a href="./">
+                                                                <img src="./images/user-dp.png" alt="Abidhusain profile image" height="90px" width="90px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="nft-title">
+                                                            <h2 class="highlight">basis.markets</h2>
+                                                        </div>
+                                                        <div class="nft-user">
+                                                            <h3 class="peak">Abidhusain Chidi</h3>
+                                                        </div>
+                                                        <div class="nft-redirect-btn">
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fas fa-external-link-alt"></i> Visit now
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 nft-stat-col">
+                                                    <div class="nft-stats">
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Popularity</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>26%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Community</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>28%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Originality</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>68%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Total</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>128%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-nft-block-mobile">
+                                        <div class="content">
+                                            <div class="row m-0">
+                                                <div class="col-5 nft-info-col">
+                                                    <div class="nft-info">
+                                                        <div class="image">
+                                                            <a href="./">
+                                                                <img src="./images/user-dp.png" alt="Abidhusain profile image" height="90px" width="90px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="nft-title">
+                                                            <h2 class="highlight">basis.markets</h2>
+                                                        </div>
+                                                        <div class="nft-user">
+                                                            <h3 class="peak">Abidhusain Chidi</h3>
+                                                        </div>
+                                                        <div class="nft-redirect-btn">
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fas fa-external-link-alt"></i> Visit now
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 nft-stat-col">
+                                                    <div class="nft-stats">
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Popularity</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>26%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Community</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>28%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Originality</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>68%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="text">
+                                                                <span>Total</span>
+                                                            </div>
+                                                            <div class="stat">
+                                                                <span>128%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- New NFTs block end -->
+
+                        <!-- Reflect Rank block start -->
+                        <div class="col-lg-4">
+                            <div class="right-block">
+                                <div class="rank-block">
+                                    <div class="bar-graph-wrapper">
+                                        <div class="heading">
+                                            <h2>
+                                                <span class="highlight">Reflect Rank</span> NFTs
+                                            </h2>
+                                        </div>
+                                        <div class="bar-graph">
+                                            <img src="./images/graph-1.png" alt="Bar graph" height="400px" width="500px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gooogle-ads">
+                                    <img src="./images/img1.png" alt="dummy image">
+                                    <img src="./images/img2.png" alt="dummy image">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Reflect Rank block end -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- New NFTs block and Reflect Rank block end-->
+        </main>
+
+        <footer>
+            <div class="gemstool-footer">
+                <div class="container-lg">
+                    <div class="credits">
+                        <div class="copyright">
+                            <span>Copyright 2021 | Gems Tools</span>
+                        </div>
+                        <div class="developed">
+                            <span>Designed and Developed by <a href="https://qalbit.com/" target="_blank"> QalbIT Solution </a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

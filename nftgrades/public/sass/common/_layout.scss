@@ -1,0 +1,599 @@
+//  Overiding container layout
+.container-lg {
+    transition: max-width 0.2s;
+    @include min-media($lg) {
+        max-width: 1080px;
+    }
+    @include min-media($xl-1) {
+        max-width: 1200px;
+    }
+    @include min-media($xl-2) {
+        max-width: 1300px;
+    }
+    @include min-media($xl-3) {
+        max-width: 1500px;
+    }
+    @include min-media($xl-4) {
+        max-width: 1600px;
+    }
+}
+
+// Common layout for buttons
+.btn-layout {
+    @extend .bold-20;
+    color: $saffron;
+    height: 50px;
+    padding: 10px 55px;
+    margin-top: 30px;
+    background-color: $white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include max-media($sm) {
+        height: 40px;
+        padding: 10px 42px;
+        line-height: 21px;
+    }
+}
+
+// Common layout for body
+.body-wrapper {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, $darkblue1, $darkblue2);
+    overflow-x: hidden;
+}
+
+// Section padding
+section {
+    padding: 20px 0px;
+}
+
+// Table custom scroll bar
+.table-responsive {
+    overflow-x: auto;
+    scrollbar-color: #103462 rgba(0, 0, 0, 0.3);
+    scrollbar-width: thin;
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #103462;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+// User tab style
+// react carousel start
+.rec-slider-container,
+.fPDpuU {
+    overflow: visible !important;
+    margin: 0!important;
+    // overflow-x: hidden !important;
+}
+
+.rec-carousel-item {
+    .rec-item-wrapper {
+        overflow: visible !important;
+        >div {
+            width: 100%;
+        }
+    }
+}
+
+// react carousel end
+.nft-user-detail-layout {
+    // padding: 20px 0px;
+    @include max-media($md) {
+        margin-bottom: 20px;
+    }
+    .content {
+        background-color: $darkblue2;
+        padding: 20px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include max-media($sm) {
+            padding: 15px 5px;
+        }
+        @include boxshadow;
+        .nft-info-col {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 2px;
+                background-image: url(../images/dash-divider.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .nft-info {
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .image {
+                margin-bottom: 5px;
+                img {
+                    height: 90px;
+                    width: 90px;
+                    border-radius: 50px;
+                    border: 2px solid $darkblue1;
+                    @include max-media($sm) {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+            .nft-title {
+                h2 {
+                    @extend .bold-16;
+                    color: $saffron;
+                    margin: 0
+                }
+            }
+            .nft-user {
+                h3 {
+                    @extend .std-12;
+                    margin: 0
+                }
+            }
+            .nft-redirect-btn {
+                display: none;
+                margin-top: 15px;
+                @include max-media($md) {
+                    display: block;
+                    margin-top: 5px;
+                }
+                a {
+                    text-decoration: none;
+                    @extend .bold-16;
+                    color: $white;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .nft-stats {
+            display: grid;
+            grid-template-columns: 100%;
+            gap: 5px 0;
+            .item {
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                margin-bottom: 0;
+                gap: 0 5px;
+                .text {
+                    span {
+                        @extend .bold-14;
+                        color: $saffron;
+                    }
+                }
+                .stat {
+                    span {
+                        @extend .bold-20;
+                    }
+                }
+                &:not(:last-child){
+                    border-bottom: 1px dashed rgb(255 255 255 / 13%);
+                }
+            }
+        }
+    }
+}
+
+@include min-media(1024px){
+    #nft-list-table{
+        // table-layout: fixed;
+        & *{
+            overflow-wrap: break-word;
+        }
+        td{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    .nft-detail-col{
+        width: 220px;   
+    }
+}
+.nft-detail-column{
+    min-width: 280px;
+}
+.color-orange{
+    color: #F2911B;
+}
+.table-detail-column-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    &:not(:last-child){
+        border-bottom: 1px dashed rgb(255 255 255 / 13%);
+    }
+}
+@media (max-width: 1350px) {
+    .custom-newnft-row{
+        .col-xl-8, .col-xl-4{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+.owl-stage-outer{
+    overflow: visible!important;
+}
+.carousel-items{
+    padding: 10px;
+}
+.owl-item, .custom-carasol-min-height, .carousel-items, .item.nft-block, .item.nft-block .content{
+    min-height: 350px!important;
+    @media (max-width: $sm) {
+        min-height: 300px!important;
+    }
+}
+.total_liks_count{
+    display: inline-block;
+    // color: $saffron!important;
+    background-color: $saffron!important;
+    border-radius: 4px!important;
+    margin-right: 10px;
+    padding: 0px 6px!important;
+    position: relative;
+    height: 26px!important;
+    font-size: 12px!important;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) translateX(50%) rotate(45deg);
+        height: 8px;
+        width: 8px;
+        background-color: $saffron;
+        // background-color: red;
+        z-index: 1;
+    }
+    .count, i{
+        position: relative;
+        z-index: 2;
+    }
+}
+.like{
+    min-width: 65px;
+    .total_liks_count{
+        color: #158800;
+    }
+}
+.liked{
+    min-width: 65px;
+    .total_liks_count{
+        color: #5f5e5e;
+    }
+}
+
+.skeleton {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(185,185,185,0.4) 0%, rgba(255,255,255,0.1) 100%);
+    border-radius: 20px;
+  }
+  .submit-nft-text-message{
+      @extend .bold-14;
+      color: $saffron;
+  }
+
+//   admin style
+
+.user-list-table{
+    overflow-wrap: break-word;
+    .user-info-column{
+        width: 300px;
+    }
+}
+.form-control.textarea{
+    height: 100px!important;
+    border-radius: 20px!important;
+}
+.form-control.file-upload{
+    min-height: '60px';
+    height: auto!important;
+    border-radius: 20px!important;
+    .selected-file-wrapper{
+        margin-bottom: 10px;
+        .selected-file{
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 5px 16px;
+            background-color: #011c40;
+            border-radius: 20px;
+            word-break: break-all;
+        }
+    }
+    
+    input{
+        position: absolute;
+        right: 999999px;
+    }
+    .file-label{
+        padding-left: 0!important;
+        .form-btn{
+            margin-top: 0!important;
+            background: white!important;
+            padding: 10px 20px!important;
+            height: 45px!important;
+            color: #f2911b!important;
+        }
+    }
+}
+.readmore{
+    cursor:pointer;
+}
+
+// 404 page style
+@include min-media($sm) {
+    .page-404-error {
+        height: 400px;
+        width: 400px;
+        margin: auto;
+        border-radius: 50%;
+        @include boxshadow;
+        .error {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #389c09;
+    background-color: #389c09;
+}
+.custom-control-input~.custom-control-label::before {
+    color: #fff;
+    border-color: #b41d12;
+    background-color: #b41d12;
+}
+.readmore{
+    font-family: $nunito-fonts;
+}
+
+// SweetAlert popup custom styles
+.swal2-popup {
+    h2 {
+        &.swal2-title {
+            font-size: 18px;
+        }
+    }
+    .swal2-actions {
+        button.swal2-confirm {
+            border: 2px solid $darkblue1;
+            border-radius: 0.5rem;
+            background-image: linear-gradient(45deg, $darkblue1, $darkblue2);
+            padding: 0.6rem 1.1rem;
+            box-shadow: none;
+            outline: none;
+            &:hover {
+                background-color: $darkblue1;
+            }
+        }
+        button.swal2-cancel {
+            color: $darkblue2;
+            border: 2px solid $darkblue2;
+            border-radius: 0.5rem;
+            padding: 0.6rem 1.1rem;
+            background-color: transparent;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: none;
+            outline: none;
+            &:hover {
+                color: $white;
+                background-color: $darkblue2;
+            }
+        }
+    }
+}
+.timezone-picker{
+    width: 100%;
+}
+#timeZoneSelect{
+    appearance: none;
+}
+.border-dashed{
+    border-bottom: 2px dashed #133e74;
+}
+
+.highlight.imp{
+    color: #F2911B!important;
+    cursor: pointer;
+}
+.highlight.important{
+    color: #F2911B!important;
+}
+.discord, .twitter, .facebook{
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 5px;
+}
+.twitter{
+    i{
+        color: #1DA1F2;
+    }
+}
+.discord{
+    i{
+        color: #5865F2;
+    }
+}
+.facebook{
+    i{
+        color: #4267B2;
+    }
+}
+
+.socialmedia-list{
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    font-family:  $nunito-fonts;
+    margin: 0;
+    padding: 0;
+    li{
+        padding: 5px 20px;
+        border-radius: 20px;
+        background-color: #011126;
+        margin-bottom: 5px;
+    }
+}
+.mobile-more-detail{
+    font-family:  $nunito-fonts;
+    @extend .bold-16;
+}
+
+.average_text_in_user_detail{
+    @include max-media($sm){
+        .average_text_in_user_detail{
+            display: none;
+        }
+    }
+}
+
+.potential-blue-chip-graph{
+    .dot-container{
+        .dot{
+            display: inline-block;
+            margin-right: 5px;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            position: relative;
+
+            &.std{
+                background-color: #5f5e5e;
+                &::before{
+                    filter: none!important;
+                }
+            }
+            &.red{
+                background-color: #e74c3c;
+            }
+            &.yellow{
+                background-color: #F2911B;
+            }
+            &.green{
+                background-color: #158800;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: inherit;
+                border-radius: 50%;
+                filter: blur(5px);
+            }
+        }
+    }
+}
+
+@keyframes loading_nft_detail_amimation {
+    from{
+        transform: rotate(45deg) translateX(-150%);
+    }
+    to{
+        transform: rotate(45deg) translateX(250%);
+    }
+}
+
+.std-loading-design{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 100%);
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    &:after{
+        content: "";
+        top: -50vw;
+        left: -20vw;
+        position: absolute;
+        width: 50%;
+        height: 200vw;
+        background-repeat: no-repeat;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(209, 209, 209, 0.116) 50%, rgba(255, 255, 255, 0));
+        transform: rotate(45deg) translateX(-150%);
+        animation: loading_nft_detail_amimation 0.5s linear infinite;
+    }
+}
+
+.sticky-button{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    a{
+        display: inline-block;
+        padding: 10px;
+        background-color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 130px;
+        color:#01193a;
+        
+        
+        @include max-media($lg) {
+            padding: 6px;
+            width: 120px;
+        }
+
+        .icon{
+            background-color: #01193a;
+            height: 30px;
+            width: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            margin-right: 5px;
+        }
+        span{
+            @extend .bold-16;
+        }
+    }
+}
+
+
+.h1-heading{
+    font-family: $nunito-fonts;
+    @extend .bold-28;
+}

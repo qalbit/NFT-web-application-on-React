@@ -1,0 +1,31 @@
+.verify-nft {
+    .heading {
+        h1 {
+            @extend .special-font;
+            margin-bottom: 20px;
+        }
+    }
+    .left-block {
+        .verify-nft-form {
+            form {
+                @extend .form-layout;
+                .right-box {
+                    @include max-media($md) {
+                        margin-top: 30px;
+                    }
+                }
+                .image {
+                    text-align: center;
+                    img {
+                        width: 130px;
+                        height: 130px;
+                        @include max-media($lg) {
+                            width: 90px;
+                            height: 90px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
