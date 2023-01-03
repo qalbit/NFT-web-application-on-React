@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>NFT Grades | Admin Login</title>
+</head>
+
+<body>
+    <div class="body-wrapper">
+
+        <!-- Navigation header start -->
+        <header>
+            <nav class="head-nav">
+                <div class="container-lg">
+                    <div class="wrapper">
+                        <div class="brand-logo">
+                            <a href="./">
+                                <img src="./images/gemstool-logo.png" alt="NFT Grades image" width="180px" height="46px">
+                            </a>
+                        </div>
+                        <div class="nav-links">
+                            <ul class="user-list d-none">
+                                <li>
+                                    <a href="./submit-nfts.html">Submit NFT</a>
+                                </li>
+                            </ul>
+                            <ul class="admin-list">
+                                <li>
+                                    <a href="./admin-userlist.html">User List</a>
+                                </li>
+                                <li>
+                                    <a href="./admin-nftlist.html">NFT List</a>
+                                </li>
+                                <li>
+                                    <a href="#">User Name 
+                                        <span><i class="fas fa-chevron-circle-down"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Navigation header end -->
+
+        <main class="main-spacing">
+            <!-- NFT list and add NFT form start -->
+            <section class="admin-userlist">
+                <div class="container-lg">
+                    <div class="row">
+                        <!-- NFT list start -->
+                        <div class="col-lg-8 left-block">
+                            <div class="user-list-table-wrapper">
+                                <div class="heading">
+                                    <h1> <span class="highlight">New</span> NFTs </h1>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="user-list-table table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <td>#</td>
+                                                <td>NFT Details</td>
+                                                <td>Popularity</td>
+                                                <td>Community</td>
+                                                <td>Utility</td>
+                                                <td>Originality</td>
+                                                <td>Total</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="user-col">
+                                                    <div class="user-info-block nft-block">
+                                                        <div class="wrapper">
+                                                            <div class="image">
+                                                                <img src="./images/user-dp.png" alt="User profile image" height="50px" width="50px">
+                                                            </div>
+                                                            <div class="content">
+                                                                <div class="user-name">
+                                                                    <span>Abidhusain Chidi</span>
+                                                                </div>
+                                                                <div class="user-email">
+                                                                    <span>abidhusain@qalbit.com</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="view-now-btn">
+                                                            <a href="#">
+                                                                <i class="fas fa-external-link-alt"></i> Visit now
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="pcuot">26</td>
+                                                <td class="pcuot">28</td>
+                                                <td class="pcuot">Reward</td>
+                                                <td class="pcuot">68</td>
+                                                <td class="pcuot">128</td>
+                                                <td class="action-col">
+                                                    <div class="action-btns">
+                                                        <button class="edit">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </button>
+                                                        <button class="delete">
+                                                            <i class="fas fa-trash-alt"></i> Delete
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NFT list end -->
+
+                        <!-- NFT form start -->
+                        <div class="col-lg-4 right-block">
+                            <div class="add-user-form-wrapper">
+                                <div class="heading">
+                                    <h1> <span class="highlight">Add</span> NFTs </h1>
+                                </div>
+                                <form action="" method="post" id="add-nft-form">
+                                    <div class="box-modal">
+                                        <div class="title">
+                                            <h3>NFT Information</h3>
+                                        </div>
+                                        <div class="form-group select-group">
+                                            <select name="user_select" id="user_select" class="form-control">
+                                                <option value="" disabled selected>Select</option>
+                                                <option value="">Option 1</option>
+                                                <option value="">Option 2</option>
+                                                <option value="">Option 3</option>
+                                            </select>
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="nft_name" id="nft_name" class="form-control" placeholder="Name">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="url" name="nft_link" id="nft_link" class="form-control" placeholder="Link">
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="form-collection">
+                                            <div class="form-group">
+                                                <input type="tel" name="add_popularity" id="add_popularity" class="form-control" placeholder="Popularity">
+                                                <div class="error-message"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" name="add_community" id="add_community" class="form-control" placeholder="Community">
+                                                <div class="error-message"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" name="add_originality" id="add_originality" class="form-control" placeholder="Originality">
+                                                <div class="error-message"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" name="add_total" id="add_total" class="form-control" placeholder="total">
+                                                <div class="error-message"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="nft_utility" id="nft_utility" class="form-control" placeholder="Utility">
+                                            <div class="error-message"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="form-btn add-user-btn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- NFT form end -->
+                    </div>
+                </div>
+            </section>
+            <!-- NFT list and add NFT form end -->
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

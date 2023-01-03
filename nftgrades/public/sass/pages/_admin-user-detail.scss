@@ -1,0 +1,164 @@
+.user-nft-detail {
+    .grid-container {
+        .left-block {
+            .user-detail {
+                .heading {
+                    h1 {
+                        @extend .special-font;
+                        margin-bottom: 20px;
+                    }
+                }
+                .user-detail-tab {
+                    @include max-media($md) {
+                        min-width: 290px;
+                        max-width: 360px;
+                        margin: auto;
+                    }
+                    .tab-wrapper {
+                        border-radius: 25px;
+                        @include boxshadow;
+                        background-color: $darkblue2;
+                        .content {
+                            text-align: center;
+                            padding: 30px;
+                            > div {
+                                > span {
+                                    display: block;
+                                    @include max-media($sm) {
+                                        line-height: 18px !important;
+                                    }
+                                }
+                            }
+                            .image {
+                                img {
+                                    width: 90px;
+                                    height: 90px;
+                                }
+                            }
+                            .user-name {
+                                span {
+                                    @extend .bold-18;
+                                    color: $saffron;
+                                }
+                            }
+                            .user-email {
+                                span {
+                                    @extend .std-18;
+                                    color: $seablue;
+                                }
+                            }
+                            .user-phone {
+                                margin-top: 5px;
+                                a {
+                                    text-decoration: none;
+                                    @extend .std-18;
+                                    color: $white;
+                                }
+                            }
+                            .nft-status {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 60px;
+                                @include max-media($md) {
+                                    margin-top: 40px;
+                                }
+                                @include max-media($sm) {
+                                    margin-top: 20px;
+                                }
+                                .nft-like,
+                                .nft-rank {
+                                    span {
+                                        @extend .bold-28;
+                                        color: $white;
+                                    }
+                                }
+                                .nft-like {
+                                    .icon {
+                                        color: #AFFFA0;
+                                    }
+                                }
+                                .nft-rank {
+                                    .rank {
+                                        color: $seablue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-block {
+            @include max-media($md) {
+                margin-top: 40px;
+            }
+            .user-nft-list {
+                .list-wrapper {
+                    .heading {
+                        h2 {
+                            @extend .special-font;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .detail-list {
+                        .detail-nft {
+                            padding-bottom: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            .nft-header {
+                                h2 {
+                                    @extend .bold-32;
+                                    color: $seablue;
+                                }
+                            }
+                            .nft-content {
+                                display: flex;
+                                min-width: 100%;
+                                justify-content: space-between;
+                                align-items: flex-end;
+                                position: relative;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 1px;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-image: url(../images/horizontal-divider.png);
+                                    background-repeat: no-repeat;
+                                }
+                                .nft-stats {
+                                    display: flex;
+                                    margin-bottom: 8px;
+                                    >div {
+                                        margin-right: 15px;
+                                    }
+                                    .title {
+                                        @extend .bold-28;
+                                        color: $saffron
+                                    }
+                                    .stat {
+                                        @extend .bold-18;
+                                        color: $white;
+                                    }
+                                }
+                                .nft-likes {
+                                    white-space: nowrap;
+                                    span {
+                                        @extend .bold-28;
+                                        &.icon {
+                                            color: #AFFFA0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

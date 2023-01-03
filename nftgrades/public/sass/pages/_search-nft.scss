@@ -1,0 +1,88 @@
+.nft-search-container{
+    position: relative;
+    .nft-search-result-container{
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        z-index: 99;
+        background-color: #011c40;
+        border: 2px solid #011126;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+
+        ul{
+            list-style: none;
+            margin: 0;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            li{
+                display: block;
+                padding: 10px 12px;
+                text-align: left;
+                display: flex;
+                cursor: pointer;
+                transition: 0.1s;
+                font-family: $nunito-fonts;
+                &:not(:last-child){
+                    border-bottom: 1px solid #172a42;
+                }
+                &:hover{
+                    background-color: #011126;
+                }
+                .counter{
+                    font-size: 14px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    min-width: 25px;
+                    text-align: center;
+                }
+                .detail{
+                    font-size: 13px;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    .image{
+                        display: inline-block;
+                        height: 35px;
+                        width: 35px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        margin-right: 8px;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .code{
+                        color: #818181;
+                        max-width: 30%;
+                        display: inline-block;
+                        height: 20px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: right;
+                        font-size: 12px;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+        &.first{
+            @include max-media($sm) {
+                width: calc(100vw - 65px);
+            }
+        }
+        &.second{
+            @include max-media($sm) {
+                width: calc(100vw - 65px);
+                left: calc(-50vw + 10px);
+            }
+        }
+    }
+
+}

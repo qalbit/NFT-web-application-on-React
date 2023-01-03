@@ -1,0 +1,157 @@
+.admin-userlist {
+    .left-block {
+        .user-list-table-wrapper {
+            .heading {
+                margin-bottom: 20px;
+                h1 {
+                    @extend .special-font;
+                }
+            }
+            .user-list-table {
+                tr {
+                    border-bottom: 1px solid rgb(160, 160, 160);
+                }
+                td {
+                    vertical-align: middle;
+                }
+                thead {
+                    td {
+                        @extend .bold-18;
+                        white-space: nowrap;
+                    }
+                }
+                tbody {
+                    td {
+                        &:first-child {
+                            @extend .bold-18;
+                        }
+                        &.user-number {
+                            @extend .std-14;
+                        }
+                        &.view-more {
+                            a {
+                                text-decoration: none;
+                                color: $white;
+                                text-transform: uppercase;
+                                @extend .bold-14;
+                                white-space: nowrap;
+                            }
+                        }
+                        &.user-col {
+                            .user-info-block {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+    
+                                .image {
+                                    margin-right: 15px;
+                                    img {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                }
+                                .content {
+                                    .user-name {
+                                        span {
+                                            @extend .bold-18;
+                                            color: $saffron;
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                    .user-email {
+                                        span {
+                                            @extend .std-14;
+                                            color: $seablue;
+                                        }
+                                    }
+                                }
+                            }
+                            .nft-block {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-start;
+                                // Admin nftlist start
+                                .wrapper {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                }
+                                .view-now-btn {
+                                    margin-top: 15px;
+                                    a {
+                                        text-decoration: none;
+                                        @extend .bold-14;
+                                        color: $white;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                // Admin nftlist end
+                            }
+                        }
+                        // Admin nftlist start
+                        &.pcuot {
+                            @extend .bold-28;
+                        }
+                        // Admin nftlist end
+                        &.action-col {
+                            .action-btns {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-end;
+                                button {
+                                    border: none;
+                                    background-color: transparent;
+                                    border-radius: 23px;
+                                    height: 30px;
+                                    @extend .bold-14;
+                                    color: $white;
+                                    text-transform: uppercase;
+                                    padding: 0px 10px;
+                                    white-space: nowrap;
+                                    outline: none;
+                                    &.edit {
+                                        background-color: $skyblue;
+                                    }
+                                    &.delete {
+                                        margin-top: 8px;
+                                        background-color: $delete;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .right-block {
+
+        @include max-media($lg){
+            padding-top: 40px;
+        }
+
+        .add-user-form-wrapper {
+            .heading {
+                h1 {
+                    @extend .special-font;
+                    margin-bottom: 20px;
+                }
+            }
+            form {
+                @extend .form-layout;
+
+                .full-name {
+                    @media screen and (min-width: $sm) and (max-width: $lg) {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        column-gap: 20px;
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
